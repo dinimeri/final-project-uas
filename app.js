@@ -10,10 +10,11 @@ const express = require("express");
 const router = require("./routes/api");
 // object express
 const app = express();
-app.use(router);
 // middleware
 app.use(express.json());
 app.use(express.urlencoded());
+// Routing
+app.use(router);
 // port
 app.listen(3000, () => {
     console.log("Server running at http://localhost:3000");
