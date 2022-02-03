@@ -33,7 +33,7 @@ class Patient {
     static find(id) {
         // find data by id
         return new Promise((resolve, reject) => {
-            const sql = "UPDATE patients WHERE id = ?";
+            const sql = "SELECT * FROM patients WHERE id = ?";
             db.query(sql, id, (err, results) => {
                 // destruct to array
                 const [patient] = results;
